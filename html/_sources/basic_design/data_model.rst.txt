@@ -1,0 +1,133 @@
+論理データモデル
+================
+
+1. ER 図
+--------
+
+.. mermaid::
+   :caption: 図 1 論理 ER 図（主な属性のみ）
+
+   erDiagram
+     CUSTOMER ||--o{ ORDER : "注文する"
+     ORDER ||--|{ ORDER_LINE : "含む"
+     PRODUCT ||--o{ ORDER_LINE : "注文される"
+     PRODUCT ||--|| STOCK : "持つ"
+     ORDER ||--o| SHIPMENT : "出荷される"
+     CUSTOMER ||--o{ INVOICE : "請求される"
+     INVOICE ||--o{ SHIPMENT : "集計する"
+     CUSTOMER {
+       string customer_code PK "顧客コード"
+       string name "顧客名"
+       int closing_day "締め日"
+     }
+     PRODUCT {
+       string product_code PK "商品コード"
+       string name "商品名"
+       int unit_price "標準単価"
+     }
+     STOCK {
+       string product_code PK "商品コード"
+       int on_hand "実在庫"
+       int allocated "引当済数"
+     }
+     ORDER {
+       string order_no PK "受注番号"
+       string customer_code FK "顧客コード"
+       string delivery_time_slot "希望配送時間帯"
+       string status "状態"
+     }
+     ORDER_LINE {
+       string order_no PK "受注番号"
+       int line_no PK "明細番号"
+       string product_code FK "商品コード"
+       int quantity "数量"
+       int allocated_qty "引当数"
+     }
+     SHIPMENT {
+       string shipment_no PK "出荷番号"
+       string order_no FK "受注番号"
+       string tracking_no "問い合わせ番号"
+     }
+     INVOICE {
+       string invoice_no PK "請求番号"
+       string customer_code FK "顧客コード"
+       date closing_date "締め日"
+     }
+     USER {
+       string user_id PK "ユーザー ID"
+       string role "ロール"
+     }
+
+2. エンティティ定義
+-------------------
+
+.. ent:: 顧客
+   :id: ENT_001
+   :status: review
+   :owner: 鈴木
+
+   商品を卸す取引先。主な属性は顧客コード、顧客名、届け先住所、締め日（20 日 / 末日）、使用停止フラグ。
+
+.. ent:: 商品
+   :id: ENT_002
+   :status: review
+   :owner: 鈴木
+
+   取り扱う商品。主な属性は商品コード、商品名、標準単価、消費税区分（10 % / 8 %）、使用停止フラグ。
+
+.. ent:: 在庫
+   :id: ENT_003
+   :status: review
+   :owner: 鈴木
+
+   商品ごとの在庫数。主な属性は実在庫、引当済数。有効在庫は「実在庫 − 引当済数」で計算し、保持しない。
+
+.. ent:: 受注
+   :id: ENT_004
+   :status: review
+   :owner: 鈴木
+
+   1 回の注文。主な属性は受注番号、顧客、受注日、希望納期、希望配送時間帯（任意、 :need:`CR_001` で追加）、受注経路（画面 / EDI）、状態。
+   状態は「受付 → 引当済 / 一部引当 → 出荷指示済 → 出荷済」と進み、途中で「取消」になることがある。
+
+.. ent:: 受注明細
+   :id: ENT_005
+   :status: review
+   :owner: 鈴木
+
+   受注に含まれる商品ごとの行。主な属性は商品、数量、単価、引当数。
+
+.. ent:: 出荷
+   :id: ENT_006
+   :status: review
+   :owner: 鈴木
+
+   1 回の出荷。受注 1 件に対して出荷 1 件（分納はしない）。主な属性は出荷番号、出荷日、問い合わせ番号、送信状態、請求番号。
+
+.. ent:: 請求
+   :id: ENT_007
+   :status: review
+   :owner: 鈴木
+
+   顧客ごと・締め日ごとの請求。主な属性は請求番号、請求期間、税率ごとの金額、会計連携済みフラグ。
+
+.. ent:: ユーザー
+   :id: ENT_008
+   :status: review
+   :owner: 鈴木
+
+   システムの利用者。主な属性はユーザー ID、氏名、ロール、パスワードハッシュ。
+
+エンティティ一覧（表）
+----------------------
+
+.. needtable::
+   :types: ent
+   :columns: id;title;status;creates_back as "登録 (C)";updates_back as "更新 (U)";realizes_back as "テーブル"
+   :style: table
+   :sort: id
+
+.. newbie:: ER 図の記号
+
+   線の端の記号は件数を表します。 ``||`` は「ちょうど 1」、 ``o{`` は「0 以上」、 ``|{`` は「1 以上」、 ``o|`` は「0 か 1」です。
+   たとえば「顧客 ``||--o{`` 受注」は「1 人の顧客は 0 件以上の受注を持つ」と読みます。

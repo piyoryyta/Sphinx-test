@@ -1,0 +1,94 @@
+業務要件一覧
+============
+
+業務として「何ができればよいか」を定義します。システムの作り方（画面やテーブル）はここでは決めません。
+各要件は、解決する課題（ISS）と対象の業務（BIZ）に ``satisfies`` でつないでいます。
+
+.. br:: 受注情報を電子的に一元登録できること
+   :id: BR_001
+   :status: approved
+   :priority: 高
+   :owner: 佐藤
+   :satisfies: ISS_001, BIZ_001
+
+   FAX・電話・EDI のどの経路で受けた注文も、同じ形式の受注データとして一か所に記録できること。
+   手作業での転記は、FAX・電話の受付時の 1 回だけにすること。
+
+.. br:: 受注時点で在庫を引き当てられること
+   :id: BR_002
+   :status: approved
+   :priority: 高
+   :owner: 佐藤
+   :satisfies: ISS_002, BIZ_002
+
+   受注を登録した時点の最新在庫で引当を行い、欠品であれば受付時にわかること。
+
+.. br:: 出荷指示を倉庫へ電子的に伝達できること
+   :id: BR_003
+   :status: approved
+   :priority: 高
+   :owner: 佐藤
+   :satisfies: ISS_003, BIZ_003
+
+   出荷すべき受注が倉庫から漏れなく見え、出荷したかどうかを記録できること。
+   運送会社への送り状の手書きをなくすこと。
+
+.. br:: 出荷実績から請求書を自動作成できること
+   :id: BR_004
+   :status: approved
+   :priority: 中
+   :owner: 佐藤
+   :satisfies: ISS_004, BIZ_004
+
+   顧客ごとの締め日に、その期間の出荷実績を集計した請求書を作成できること。
+
+.. br:: 売上を会計システムへ自動連携できること
+   :id: BR_005
+   :status: approved
+   :priority: 中
+   :owner: 佐藤
+   :satisfies: ISS_004, BIZ_004
+
+   請求確定した売上を、会計システムへ手入力なしで連携できること。
+
+.. br:: 受注・出荷の状況を即時に照会できること
+   :id: BR_006
+   :status: approved
+   :priority: 中
+   :owner: 佐藤
+   :satisfies: ISS_005, BIZ_006
+
+   顧客名や受注番号から、引当・出荷・配送の状況をその場で確認できること。
+
+.. br:: 顧客・商品の情報を一元管理できること
+   :id: BR_007
+   :status: approved
+   :priority: 中
+   :owner: 佐藤
+   :satisfies: ISS_006, BIZ_005
+
+   顧客と商品の情報をシステム上の 1 か所で管理し、すべての業務がそれを参照すること。
+
+.. br:: データを安全に保全し、利用者を管理できること
+   :id: BR_008
+   :status: approved
+   :priority: 中
+   :owner: 佐藤
+   :satisfies: ISS_006
+
+   データが消えないこと、権限のない人が操作できないこと、誰が何をしたか後から追えること。
+
+業務要件一覧（表）
+------------------
+
+.. needtable::
+   :types: br
+   :columns: id;title;priority as "優先度";satisfies as "対応する課題・業務";satisfies_back as "下流の要件"
+   :style: table
+   :sort: id
+
+.. newbie:: 業務要件と機能要件の違い
+
+   業務要件は「業務として何ができればよいか」で、ユーザー部門の言葉で書きます。
+   機能要件（:doc:`functional_requirements`）は「そのためにシステムが何をするか」です。
+   たとえば「欠品が受付時にわかる」は業務要件、「受注登録時に在庫を自動で引き当てる」は機能要件です。

@@ -1,0 +1,104 @@
+非機能要件一覧
+==============
+
+機能以外にシステムが満たすべき品質の要件です。分類は IPA「非機能要求グレード」の大項目にそろえています。
+
+.. nfr:: 画面応答時間
+   :id: NFR_001
+   :status: approved
+   :priority: 高
+   :owner: 鈴木
+   :category: 性能・拡張性
+   :satisfies: BR_006
+
+   通常の画面操作（検索・登録）は 90 パーセンタイルで 2 秒以内に応答すること。
+   請求締めのような重い処理は画面を待たせず、バックグラウンドで実行すること。
+
+.. nfr:: 同時利用者数
+   :id: NFR_002
+   :status: approved
+   :priority: 中
+   :owner: 鈴木
+   :category: 性能・拡張性
+   :satisfies: BR_001
+
+   同時に 50 人が操作しても NFR_001 を満たすこと（現在の利用者は約 30 人）。
+
+.. nfr:: 稼働時間と可用性
+   :id: NFR_003
+   :status: approved
+   :priority: 高
+   :owner: 鈴木
+   :category: 可用性
+   :satisfies: BR_003
+
+   平日 7:00 〜 21:00 に利用できること。この時間帯の稼働率は 99.5 % 以上とすること。
+   夜間（21:00 〜 7:00）はバッチ処理と保守のために停止してよい。
+
+.. nfr:: バックアップと復旧
+   :id: NFR_004
+   :status: approved
+   :priority: 高
+   :owner: 鈴木
+   :category: 可用性
+   :satisfies: BR_008
+
+   データベースは毎晩フルバックアップを取り、30 日分を保管すること。
+   障害時は前日夜の状態まで（RPO 24 時間）、4 時間以内（RTO 4 時間）に戻せること。
+
+.. nfr:: 利用者認証と権限
+   :id: NFR_005
+   :status: approved
+   :priority: 高
+   :owner: 鈴木
+   :category: セキュリティ
+   :satisfies: BR_008
+
+   ユーザー ID とパスワードで認証すること。社外からは使えないこと。
+   ロール（営業事務・倉庫・経理・管理者）ごとに使える機能を制限すること。
+
+.. nfr:: 操作ログ
+   :id: NFR_006
+   :status: approved
+   :priority: 中
+   :owner: 鈴木
+   :category: セキュリティ
+   :satisfies: BR_008
+
+   登録・変更・削除の操作について、誰が・いつ・何をしたかを記録し、1 年間保管すること。
+
+.. nfr:: データ保持量
+   :id: NFR_007
+   :status: review
+   :priority: 中
+   :owner: 鈴木
+   :category: 性能・拡張性
+   :satisfies: BR_008
+
+   受注・出荷・請求データを 7 年間保持すること（法定保存期間）。
+   受注明細は年 約 30 万件、7 年で約 210 万件を見込む。
+
+.. nfr:: 利用環境
+   :id: NFR_008
+   :status: approved
+   :priority: 低
+   :owner: 鈴木
+   :category: 移行性・運用性
+   :satisfies: BR_001
+
+   社内 PC の Microsoft Edge と Google Chrome の最新版で動くこと。
+   倉庫のハンディ端末（Android、Chrome）で出荷実績登録の画面を操作できること。
+
+非機能要件一覧（表）
+--------------------
+
+.. needtable::
+   :types: nfr
+   :columns: id;title;category as "分類";priority as "優先度";verifies_back as "テスト"
+   :style: table
+   :sort: id
+
+.. newbie:: 非機能要件は「数字」と「条件」をセットで
+
+   「速いこと」ではなく「50 人同時で 2 秒以内」のように、数字と前提条件をセットで書きます。
+   条件がないと、テストのときに「どういう状態で測ればよいのか」が決まりません。

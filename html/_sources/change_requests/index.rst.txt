@@ -1,0 +1,48 @@
+変更要求一覧
+============
+
+要件定義の承認後に入った仕様変更を、変更要求（CR）として管理します。
+変更要求には ``changes`` リンクで「変更した need」をすべて書きます。下の表と図は、このリンクから自動で作られます。
+
+.. cr:: 希望配送時間帯の指定
+   :id: CR_001
+   :status: review
+   :priority: 中
+   :owner: 田中
+   :changes: FR_001, FR_002, FR_008, ENT_004, SCR_003, RPT_002, IF_001, IF_002, BAT_002, API_001, TBL_001, TC_016, TC_017, TC_018
+
+   - 依頼元: 営業本部（大口顧客 2 社からの要望）
+   - 依頼日: 2026-11-10
+   - 内容: 受注時に、希望配送時間帯（午前 / 14-16 時 / 16-18 時 / 18-21 時）を指定できるようにする。指定は任意。
+
+変更対象の need
+---------------
+
+.. needtable::
+   :filter: 'CR_001' in changes_back
+   :columns: id;type_name as "種別";title;status
+   :style: table
+   :sort: id
+
+変更範囲の図
+------------
+
+.. needflow::
+   :root_id: CR_001
+   :root_direction: outgoing
+   :link_types: changes
+   :config: lefttoright
+
+.. newbie:: 変更要求はなぜ need にするのか
+
+   変更要求も ID を持つ need にしておくと、「この変更でどこを直したか」を表と図で一覧できます。
+   後から「この要件はなぜこうなっているのか」を調べるときも、要件の「変更要求」欄から経緯をたどれます。
+
+CR_001 の記録
+-------------
+
+.. toctree::
+   :maxdepth: 1
+
+   cr001_note
+   cr001_pr_log

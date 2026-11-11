@@ -1,0 +1,107 @@
+Sphinx-Needs 入門: 書き方とビルド
+=================================
+
+このドキュメントは Sphinx（ドキュメント生成ツール）と、その拡張の Sphinx-Needs で作っています。
+テキストファイル（reStructuredText、拡張子 ``.rst`` ）で書き、HTML に変換して読みます。
+
+1. 環境の準備とビルド
+---------------------
+
+必要なもの: Python 3.12 以上、Git、Graphviz（トレース図の描画に使用）
+
+.. code-block:: powershell
+
+   # Graphviz を入れる (初回のみ)
+   winget install Graphviz.Graphviz
+
+   # リポジトリを取得して、ビルドする
+   git clone <リポジトリの URL>
+   cd sphinx-needs-poc
+   ./build.ps1          # 初回は .venv を作り、必要なパッケージを入れてからビルドする
+
+   # 書きながら確認したいとき (保存すると自動で再ビルドされる)
+   ./build.ps1 -Live
+
+ビルドが成功すると ``docs/_build/html/index.html`` ができます。
+警告が 1 件でもあるとビルドは失敗します。存在しない ID へのリンクや、決められていないステータス値などは警告になります。
+
+2. need の書き方
+----------------
+
+ID 付きの要素（need）は、次のように書きます。
+
+.. code-block:: rst
+
+   .. fr:: 受注登録（画面入力）
+      :id: FR_001
+      :status: approved
+      :priority: 高
+      :owner: 佐藤
+      :satisfies: BR_001
+
+      営業事務が FAX・電話の注文を画面から登録できること。
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 80
+
+   * - 書く場所
+     - 意味
+   * - ``.. fr::``
+     - need の種類。 ``iss`` ``biz`` ``br`` ``fr`` ``nfr`` ``fn`` ``scr`` ``rpt`` ``ifc`` ``bat`` ``ent`` ``api`` ``tbl`` ``tc`` がある
+   * - ``:id:``
+     - 必須。「接頭辞 + 3 桁の連番」。同じ ID は使えない
+   * - ``:status:``
+     - ``draft`` （作成中） / ``review`` （レビュー中） / ``approved`` （承認済み）のどれか
+   * - ``:priority:``
+     - ``高`` / ``中`` / ``低`` のどれか
+   * - ``:satisfies:`` など
+     - 上流の need へのリンク。複数あるときはカンマで区切る
+
+本文中で need を参照するときは ``:need:`FR_001``` と書くと、リンクになります。
+
+3. 表と図を自動で作る
+---------------------
+
+need を集計して表にする ``needtable`` を使うと、一覧表を手で作らずに済みます。
+
+.. code-block:: rst
+
+   .. needtable::
+      :types: fr
+      :columns: id;title;status;verifies_back as "テスト"
+      :style: table
+
+``verifies_back`` のように ``_back`` を付けると、「逆向きのリンク」（その need を指しているもの）を表示できます。
+
+そのほか、このプロジェクトでは次の仕組みを使っています。
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - 仕組み
+     - 用途
+   * - ``needflow``
+     - リンクのつながりを図にする（ :doc:`../traceability/trace_diagram` ）
+   * - ``:need_count:``
+     - 条件に合う need の件数を数える（ :doc:`../document_list` ）
+   * - ``crud-matrix``
+     - このプロジェクト独自の拡張（ ``docs/_ext/sdlc.py`` ）。CRUD 図を作る
+   * - ``newbie``
+     - このプロジェクト独自の拡張。「🔰 新卒メモ」の囲みを作る
+   * - ``mermaid``
+     - 業務フロー・ER 図・シーケンス図などを描く
+
+4. 変更の流れ
+-------------
+
+#. ブランチを作る（例: ``git switch -c add-tc-016`` ）
+#. ``.rst`` を編集し、 ``./build.ps1`` で警告なしにビルドできることを確かめる
+#. コミットしてプルリクエストを作り、レビューを受ける
+#. 承認されたら need の ``:status:`` を ``approved`` にする
+
+.. newbie:: 練習問題
+
+   :need:`FR_005` （在庫照会）について、「在庫 0 の商品を照会すると有効在庫が 0 と表示される」ことを確かめるテストケースを、次の空き番号（ :doc:`../test/test_cases` の最後の番号 + 1）で ``docs/test/test_cases.rst`` に追加してみましょう。
+   ビルドしたら、 :doc:`../traceability/matrix` の FR_005 の行に、追加したテストケースが自動で増えていることを確かめてください。

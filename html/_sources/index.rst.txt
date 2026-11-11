@@ -1,0 +1,87 @@
+受注・出荷管理システム 開発ドキュメント
+==========================================
+
+サンプル商事（架空の中堅卸売会社）の「受注・出荷管理システム」開発プロジェクトのドキュメント一式です。
+企画からテストまでの成果物を Sphinx-Needs で管理し、要件・設計・テストを ID でつないでいます。
+
+.. list-table::
+   :widths: 30 70
+
+   * - 初めて読む人
+     - :doc:`onboarding/index` から読んでください（新卒メンバー向けの読み方ガイドがあります）。
+   * - レビュアー
+     - :doc:`document_list` で成果物とステータスを確認し、:doc:`traceability/coverage` で抜け漏れを確認してください。
+   * - ドキュメントを書く人
+     - :doc:`onboarding/sphinx_needs_howto` に書き方とビルド方法があります。
+
+.. toctree::
+   :maxdepth: 1
+   :caption: はじめに
+
+   document_list
+   onboarding/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 1. 企画
+
+   planning/overview
+   planning/issues
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 2. 要件定義
+
+   requirements/business_flow
+   requirements/business_requirements
+   requirements/functional_requirements
+   requirements/nonfunctional_requirements
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 3. 基本設計
+
+   basic_design/architecture
+   basic_design/functions
+   basic_design/screens
+   basic_design/reports
+   basic_design/interfaces
+   basic_design/batches
+   basic_design/data_model
+   basic_design/crud
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 4. 詳細設計（抜粋）
+
+   detailed_design/order_entry_screen
+   detailed_design/api
+   detailed_design/tables
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 5. テスト
+
+   test/test_plan
+   test/test_cases
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 変更管理
+
+   change_requests/index
+
+.. toctree::
+   :maxdepth: 1
+   :caption: 6. トレーサビリティ
+
+   traceability/matrix
+   traceability/coverage
+   traceability/trace_diagram
+
+.. toctree::
+   :maxdepth: 1
+   :caption: 付録
+
+   appendix/glossary
+   appendix/changelog

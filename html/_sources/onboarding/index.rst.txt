@@ -1,0 +1,52 @@
+新卒メンバー向けガイド
+======================
+
+ようこそ。このガイドは、プロジェクトに途中から入ったメンバー（特に新卒の方）が、ドキュメント一式を効率よく読めるようにまとめたものです。
+最初の 1 週間で、このページの順番に読み進めてください。
+
+.. toctree::
+   :maxdepth: 1
+
+   reading_guide
+   business_basics
+   sphinx_needs_howto
+   review_checklist
+   faq
+
+1 週間の目安
+------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 15 45 40
+
+   * - 日
+     - 読むもの
+     - ゴール
+   * - 1 日目
+     - :doc:`reading_guide` 、 :doc:`business_basics` 、 :doc:`../planning/overview`
+     - 何のためのシステムかを 1 分で説明できる
+   * - 2 日目
+     - :doc:`../planning/issues` 、 :doc:`../requirements/business_flow`
+     - 今の業務の困りごとと、導入後の流れを説明できる
+   * - 3 日目
+     - :doc:`../requirements/functional_requirements` 、 :doc:`../basic_design/functions`
+     - 要件と機能の対応を、ID を使って説明できる
+   * - 4 日目
+     - :doc:`../basic_design/data_model` 、 :doc:`../basic_design/crud`
+     - 受注 1 件が登録されてから請求されるまでに、どのデータがどう変わるか説明できる
+   * - 5 日目
+     - :doc:`sphinx_needs_howto` 、 :doc:`../detailed_design/order_entry_screen`
+     - ローカルでビルドし、テストケースを 1 件追加してみる
+
+各ページの「🔰 新卒メモ」
+--------------------------
+
+各ページの最後に、緑色の「🔰 新卒メモ」の囲みがあります。
+そのページを読むときのコツや、背景にある考え方を書いています。本文がわからないときは、先にメモを読んでください。
+
+.. newbie:: 質問はいつでも
+
+   わからないことは、30 分考えてもわからなければ質問してください。
+   質問されて困る人はいません。むしろ「新しい人がつまずく場所」はドキュメントを直すきっかけになります。
+   質問して答えがわかったら、 :doc:`faq` に追記してもらえると助かります。

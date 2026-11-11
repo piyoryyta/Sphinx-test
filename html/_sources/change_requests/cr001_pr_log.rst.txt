@@ -1,0 +1,211 @@
+PR-003: CR_001 受注に希望配送時間帯を追加
+==========================================
+
+.. container:: pr-header
+
+   .. container:: pr-state-merged
+
+      Merged
+
+   ``tanaka`` が ``feature/cr-001-delivery-time-slot`` を ``main`` にマージ（コミット 2 件、2026-11-10 17:05）
+
+   - レビュアー: ``suzuki`` （開発リーダー）、 ``takahashi`` （テストリーダー）
+   - 関連: :need:`CR_001` 、 :doc:`cr001_note`
+
+説明
+----
+
+.. container:: pr-comment
+
+   .. container:: pr-comment-head
+
+      **tanaka** がコメント（10:45）
+
+   概要
+      受注時に希望配送時間帯（午前 / 14-16 時 / 16-18 時 / 18-21 時）を任意で指定できるようにします（ :need:`CR_001` ）。
+
+   変更内容
+      - 変更要求の need タイプ ``cr`` とリンク ``changes`` を追加しました
+      - FR_001、ENT_004、TBL_001、SCR_003、API_001 に時間帯を追加しました
+      - TC_016 を追加しました
+
+   影響調査
+      トレース図で FR_001 の上下をたどり、関係する need を拾いました（スナップショットを ``docs/change_requests/snapshots/`` に保存しています）。
+
+   確認したこと
+      - ``./build.ps1`` が警告なしで通ること
+      - :doc:`../traceability/coverage` に新しい抜け漏れが出ていないこと
+
+コミット
+--------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 15 65 20
+
+   * - コミット
+     - メッセージ
+     - 時刻
+   * - ``6fe127f``
+     - CR_001: 受注に希望配送時間帯を追加
+     - 10:40
+   * - ``3afd318``
+     - CR_001: レビュー指摘対応（EDI・送り状・納品書・テスト追加）
+     - 15:50
+
+会話
+----
+
+.. container:: pr-comment
+
+   .. container:: pr-comment-head
+
+      **suzuki** がレビュー: 変更を依頼（13:20）
+
+   影響調査、トレース図から入ったのは正しいです。ただ、まだ足りていません。2 点お願いします。
+
+.. container:: pr-comment pr-reply
+
+   .. container:: pr-comment-head
+
+      **suzuki** が ``docs/change_requests/index.rst`` の 12 行目にコメント
+
+   .. code-block:: rst
+
+      :changes: FR_001, ENT_004, TBL_001, SCR_003, API_001, TC_016
+
+   受注は画面からだけ入ってくるわけではありません。CRUD 図で受注（ENT_004）の列を縦に見てください。C しているのは FN_001 だけですか？
+
+.. container:: pr-comment pr-reply
+
+   .. container:: pr-comment-head
+
+      **tanaka** が返信（13:45）
+
+   FN_002 と BAT_001（EDI 取込）も C していました……。完全に見落としていました。
+   EDI の CSV に列を足すことになりますが、取引先の形式を変えてよいのでしょうか？
+
+.. container:: pr-comment pr-reply
+
+   .. container:: pr-comment-head
+
+      **suzuki** が返信（13:55）
+
+   いい質問です。形式は相手との合意なしには変えられません。
+   列は末尾に「任意列」として足し、列がない今の形式（v1）も受け付けるようにしてください。そうすれば、取引先が対応するまで待たずに稼働できます。
+   取引先との調整は営業本部の仕事なので、 :doc:`../planning/overview` の未決事項に載せておいてください。
+
+.. container:: pr-comment pr-reply
+
+   .. container:: pr-comment-head
+
+      **suzuki** が ``docs/basic_design/batches.rst`` にコメント
+
+   もう 1 点。時間帯を指定しても、運送会社に伝わらなければ配達は時間どおりになりません。
+   BAT_002（送り状データ送信）は今、受注を読んでいませんよね。CRUD 図にも印がないので、図を見ても気づけないところです。業務フロー図の「データが外に出ていくところ」を追ってみてください。
+
+.. container:: pr-comment pr-reply
+
+   .. container:: pr-comment-head
+
+      **tanaka** が返信（14:10）
+
+   BAT_002 に受注の参照（R）を足し、FR_008 と IF_002 に配達時間帯を追加します。
+   運送会社の区分コードへの変換表はどこに書けばよいでしょうか？
+
+.. container:: pr-comment pr-reply
+
+   .. container:: pr-comment-head
+
+      **suzuki** が返信（14:20）
+
+   変換表は詳細設計で書きます。送り状まわりの詳細設計はまだないので、今回は IF_002 に「変換して設定する」とだけ書いておいてください。
+
+.. container:: pr-comment
+
+   .. container:: pr-comment-head
+
+      **takahashi** がレビュー: コメント（13:40）
+
+   テストの観点から 3 点です。
+
+   #. 納品書（RPT_002）に時間帯は印字しますか？ 倉庫と顧客の両方が見る書類なので、営業本部に確認してください。
+   #. TC_016 は入口（画面）だけです。出口（納品書・送り状）を確かめるテストがないと、「保存はされたが使われていない」不具合を見逃します。
+   #. EDI は「列なし（旧形式）」「列あり」「不正な値」の 3 パターンが必要です。
+
+.. container:: pr-comment pr-reply
+
+   .. container:: pr-comment-head
+
+      **tanaka** が返信（14:35）
+
+   営業本部に確認し、納品書にも印字することになりました（指定がないときは欄ごと出さない）。
+   TC_017（納品書・送り状）と TC_018（EDI の 3 パターン）を追加します。
+
+.. container:: pr-comment pr-reply
+
+   .. container:: pr-comment-head
+
+      **suzuki** が ``docs/detailed_design/tables.rst`` にコメント
+
+   ``delivery_time_slot`` に CHECK 制約を付けてください。画面は選択式でも、API に直接不正な値が送られることはあります。そのときのエラーコードも決めておきましょう。
+
+   .. code-block:: diff
+
+      - 希望配送時間帯（AM / 14-16 / 16-18 / 18-21、指定なしは NULL）
+      + 希望配送時間帯（指定なしは NULL）。CHECK IN ('AM', '14-16', '16-18', '18-21')
+
+.. container:: pr-comment pr-reply
+
+   .. container:: pr-comment-head
+
+      **tanaka** が返信（14:40）
+
+   CHECK 制約を追加し、E006「希望配送時間帯の値が正しくありません」を定義しました。
+
+.. container:: pr-event
+
+   **tanaka** が ``3afd318`` をプッシュ（15:50）: CR_001: レビュー指摘対応（EDI・送り状・納品書・テスト追加）
+
+.. container:: pr-comment
+
+   .. container:: pr-comment-head
+
+      **tanaka** がコメント（15:55）
+
+   指摘をすべて反映しました。変更対象は 6 件から 14 件になりました。
+
+   - FR_002 / IF_001: EDI に任意列を追加（v1 も受け付け）。未決事項 No.4 に取引先との調整を追加
+   - FR_008 / IF_002 / BAT_002: 送り状に配達時間帯。BAT_002 に受注の R を追加
+   - RPT_002: 納品書に印字
+   - TBL_001 / E006: CHECK 制約とエラーコード
+   - TC_017・TC_018 を追加
+
+   変更範囲の図（ :doc:`index` ）とビルド結果を確認済みです。見落としの理由は :doc:`cr001_note` にまとめました。
+
+.. container:: pr-comment
+
+   .. container:: pr-comment-head
+
+      **takahashi** がレビュー: 承認（16:30）
+
+   テストの入口と出口がそろいました。TC_017 の期待結果に区分コードまで書いてあるのが良いです。
+
+.. container:: pr-comment
+
+   .. container:: pr-comment-head
+
+      **suzuki** がレビュー: 承認（16:50）
+
+   OK です。影響調査のチェックリストをノートにまとめたのが良いですね。次の仕様変更から、そのチェックリストを使いましょう。
+   CR_001 のステータスは、ユーザー部門の確認が終わるまで ``review`` のままにしておいてください。
+
+.. container:: pr-event
+
+   **suzuki** が ``feature/cr-001-delivery-time-slot`` を ``main`` にマージ（17:05）
+
+.. newbie:: レビューコメントの読み方
+
+   「変更を依頼」は、直さないとマージできない指摘です。「コメント」は質問や提案です。
+   指摘に答えるときは、直した内容を 1 行で返し、コミットを積んでから最後にまとめのコメントを書くと、レビュアーが確認しやすくなります。
+   わからないことは、このログの田中さんのように、その場で質問してかまいません。

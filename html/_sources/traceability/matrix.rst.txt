@@ -1,0 +1,45 @@
+トレーサビリティマトリクス
+==========================
+
+上流（課題）から下流（テスト）まで、ID のつながりを一覧にしたものです。すべて need のリンクから自動生成しています。
+
+課題 → 業務要件 → 機能要件
+--------------------------
+
+.. needtable::
+   :types: br
+   :columns: id as "業務要件";title;satisfies as "解決する課題・業務";satisfies_back as "機能要件・非機能要件"
+   :style: table
+   :sort: id
+
+機能要件 → 設計 → テスト
+------------------------
+
+.. needtable::
+   :types: fr
+   :columns: id as "機能要件";title;satisfies as "業務要件";realizes_back as "機能・バッチ・IF";verifies_back as "テストケース"
+   :style: table
+   :sort: id
+
+非機能要件 → 設計 → テスト
+--------------------------
+
+.. needtable::
+   :types: nfr
+   :columns: id as "非機能要件";title;satisfies as "業務要件";realizes_back as "設計";verifies_back as "テストケース"
+   :style: table
+   :sort: id
+
+機能 → 画面・帳票・API
+----------------------
+
+.. needtable::
+   :types: fn
+   :columns: id as "機能";title;realizes as "機能要件";realizes_back as "画面・帳票・API"
+   :style: table
+   :sort: id
+
+.. newbie:: マトリクスの使い道
+
+   - 要件が変わったとき: その要件の行を見れば、直すべき設計とやり直すべきテストがわかります（影響分析）。
+   - レビューのとき: 空欄のセルが「作り忘れ」や「テスト漏れ」の候補です。

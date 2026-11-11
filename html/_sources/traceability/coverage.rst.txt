@@ -1,0 +1,69 @@
+カバレッジ・抜け漏れチェック
+============================
+
+リンクが欠けている need を自動で一覧にしています。表が空なら問題ありません。
+
+.. list-table::
+   :header-rows: 1
+   :widths: 60 20 20
+
+   * - チェック項目
+     - 件数
+     - 母数
+   * - 業務要件のない課題
+     - :need_count:`type == 'iss' and len(satisfies_back) == 0`
+     - :need_count:`type == 'iss'`
+   * - 機能要件で実現されていない業務要件
+     - :need_count:`type == 'br' and len(satisfies_back) == 0`
+     - :need_count:`type == 'br'`
+   * - 設計で実現されていない機能要件
+     - :need_count:`type == 'fr' and len(realizes_back) == 0`
+     - :need_count:`type == 'fr'`
+   * - テストのない機能要件（結合テストの完了条件: 0 件）
+     - :need_count:`type == 'fr' and len(verifies_back) == 0`
+     - :need_count:`type == 'fr'`
+   * - テストのない非機能要件（総合テストで確認予定）
+     - :need_count:`type == 'nfr' and len(verifies_back) == 0`
+     - :need_count:`type == 'nfr'`
+   * - 画面・帳票・API・バッチから使われていない機能
+     - :need_count:`type == 'fn' and len(realizes_back) == 0`
+     - :need_count:`type == 'fn'`
+
+1. テストのない機能要件
+-----------------------
+
+.. needtable::
+   :filter: type == 'fr' and len(verifies_back) == 0
+   :columns: id;title;status
+   :style: table
+
+2. テストのない非機能要件
+-------------------------
+
+結合テストの範囲外です（ :doc:`../test/test_plan` の 2 章）。総合テスト計画書で扱う予定です。
+
+.. needtable::
+   :filter: type == 'nfr' and len(verifies_back) == 0
+   :columns: id;title;category as "分類"
+   :style: table
+
+3. 設計で実現されていない機能要件
+---------------------------------
+
+.. needtable::
+   :filter: type == 'fr' and len(realizes_back) == 0
+   :columns: id;title;status
+   :style: table
+
+4. 画面・帳票・API・バッチから使われていない機能
+-------------------------------------------------
+
+.. needtable::
+   :filter: type == 'fn' and len(realizes_back) == 0
+   :columns: id;title;status
+   :style: table
+
+.. newbie:: 表に出たものはすべて誤りなのか
+
+   そうとは限りません。たとえば 2 の非機能要件は、テスト計画で「総合テストで確認する」と決めているので、結合テストの段階では表に出るのが正常です。
+   自動チェックに出たものは、「なぜ出ているか」を説明できれば問題ありません。説明できないものが、本当の抜け漏れです。

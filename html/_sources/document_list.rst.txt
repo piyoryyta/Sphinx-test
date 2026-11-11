@@ -1,0 +1,149 @@
+成果物一覧
+==========
+
+本プロジェクトで作成する成果物と、その状態の一覧です。
+件数は need（ID 付きの要素）をビルドのたびに数え直しています。手で数字を書き換える必要はありません。
+
+成果物と工程
+------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10 28 16 10 36
+
+   * - 工程
+     - 成果物
+     - need タイプ（ID）
+     - 件数
+     - 主なレビュー観点
+   * - 企画
+     - :doc:`planning/overview`
+     - ―
+     - ―
+     - 目的・スコープ・体制に合意できるか
+   * - 企画
+     - :doc:`planning/issues`
+     - 課題（ISS）
+     - :need_count:`type == 'iss'`
+     - 課題が定量的に書かれているか
+   * - 要件定義
+     - :doc:`requirements/business_flow`
+     - 業務（BIZ）
+     - :need_count:`type == 'biz'`
+     - As-Is と To-Be の差分が説明できるか
+   * - 要件定義
+     - :doc:`requirements/business_requirements`
+     - 業務要件（BR）
+     - :need_count:`type == 'br'`
+     - すべての課題に対応する要件があるか
+   * - 要件定義
+     - :doc:`requirements/functional_requirements`
+     - 機能要件（FR）
+     - :need_count:`type == 'fr'`
+     - 業務要件を満たすのに過不足がないか
+   * - 要件定義
+     - :doc:`requirements/nonfunctional_requirements`
+     - 非機能要件（NFR）
+     - :need_count:`type == 'nfr'`
+     - 数値目標になっているか
+   * - 基本設計
+     - :doc:`basic_design/architecture`
+     - ―
+     - ―
+     - 非機能要件を満たす構成か
+   * - 基本設計
+     - :doc:`basic_design/functions`
+     - 機能（FN）
+     - :need_count:`type == 'fn'`
+     - すべての機能要件が実現されているか
+   * - 基本設計
+     - :doc:`basic_design/screens`
+     - 画面（SCR）
+     - :need_count:`type == 'scr'`
+     - 業務の流れどおりに遷移できるか
+   * - 基本設計
+     - :doc:`basic_design/reports`
+     - 帳票（RPT）
+     - :need_count:`type == 'rpt'`
+     - 出力タイミングと出力先が明確か
+   * - 基本設計
+     - :doc:`basic_design/interfaces`
+     - 外部IF（IF）
+     - :need_count:`type == 'ifc'`
+     - 相手システムとの取り決めが書かれているか
+   * - 基本設計
+     - :doc:`basic_design/batches`
+     - バッチ（BAT）
+     - :need_count:`type == 'bat'`
+     - 実行順序と異常時の扱いが明確か
+   * - 基本設計
+     - :doc:`basic_design/data_model`
+     - エンティティ（ENT）
+     - :need_count:`type == 'ent'`
+     - 業務で扱う情報が漏れなく表現されているか
+   * - 基本設計
+     - :doc:`basic_design/crud`
+     - （自動生成）
+     - ―
+     - 登録する機能がないエンティティはないか
+   * - 詳細設計
+     - :doc:`detailed_design/order_entry_screen`
+     - ―
+     - ―
+     - 入力チェックと処理順序が明確か
+   * - 詳細設計
+     - :doc:`detailed_design/api`
+     - API（API）
+     - :need_count:`type == 'api'`
+     - エラー時の応答が定義されているか
+   * - 詳細設計
+     - :doc:`detailed_design/tables`
+     - テーブル（TBL）
+     - :need_count:`type == 'tbl'`
+     - 型・桁・キーがエンティティ定義と一致するか
+   * - テスト
+     - :doc:`test/test_plan`
+     - ―
+     - ―
+     - テストの範囲と完了条件が明確か
+   * - テスト
+     - :doc:`test/test_cases`
+     - テストケース（TC）
+     - :need_count:`type == 'tc'`
+     - すべての機能要件が検証されているか
+   * - 横断
+     - :doc:`traceability/matrix` / :doc:`traceability/coverage` / :doc:`traceability/trace_diagram`
+     - （自動生成）
+     - ―
+     - 上流から下流まで ID でつながっているか
+
+ステータス集計
+--------------
+
+.. list-table::
+   :header-rows: 1
+
+   * -
+     - draft（作成中）
+     - review（レビュー中）
+     - approved（承認済み）
+     - 合計
+   * - 件数
+     - :need_count:`status == 'draft'`
+     - :need_count:`status == 'review'`
+     - :need_count:`status == 'approved'`
+     - :need_count:`True`
+
+レビュー待ちの need
+-------------------
+
+.. needtable::
+   :filter: status == 'review'
+   :columns: id;title;type_name as "種別";owner as "担当"
+   :style: table
+   :sort: id
+
+.. newbie:: このページの使い方
+
+   レビュー依頼を受けたら、まず「レビュー待ちの need」の表を見てください。
+   自分の担当分を書き終えたら、その need の ``:status:`` を ``draft`` から ``review`` に変えてビルドすると、この表に載ります。

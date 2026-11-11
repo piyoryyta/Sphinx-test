@@ -1,0 +1,157 @@
+機能一覧
+========
+
+オンライン機能（画面から使う機能）の一覧です。夜間などに自動で動く処理は :doc:`batches` にあります。
+
+各機能には次のリンクを書いています。
+
+- ``realizes``: 実現する機能要件（FR）
+- ``creates`` / ``reads`` / ``updates`` / ``deletes``: 操作するエンティティ（ENT）。:doc:`crud` はこのリンクから自動で作られます。
+
+受注
+----
+
+.. fn:: 受注登録
+   :id: FN_001
+   :status: review
+   :owner: 鈴木
+   :category: 受注
+   :realizes: FR_001
+   :creates: ENT_004, ENT_005
+   :reads: ENT_001, ENT_002, ENT_003
+
+   受注ヘッダと明細を登録する。登録後、続けて :need:`FN_004` を呼び出して在庫を引き当てる。
+   受注番号は「年月日 + 4 桁連番」（例: 202704010001）で採番する。
+
+.. fn:: 受注取込（手動）
+   :id: FN_002
+   :status: review
+   :owner: 鈴木
+   :category: 受注
+   :realizes: FR_002
+   :creates: ENT_004, ENT_005
+   :reads: ENT_001, ENT_002
+
+   EDI の受注 CSV を画面からアップロードして取り込む。
+   定時の自動取込（:need:`BAT_001`）と同じ取込ロジックを使う。
+
+.. fn:: 受注変更・取消
+   :id: FN_003
+   :status: review
+   :owner: 鈴木
+   :category: 受注
+   :realizes: FR_003
+   :reads: ENT_001, ENT_002
+   :updates: ENT_004, ENT_005
+   :deletes: ENT_005
+
+   出荷指示前の受注を変更・取消する。明細の削除は物理削除、受注全体の取消は状態を「取消」にする（論理削除）。
+   変更・取消の後は :need:`FN_004` で引当をやり直す。
+
+在庫
+----
+
+.. fn:: 在庫引当
+   :id: FN_004
+   :status: review
+   :owner: 鈴木
+   :category: 在庫
+   :realizes: FR_004
+   :reads: ENT_004
+   :updates: ENT_003, ENT_005
+
+   受注明細ごとに有効在庫から引き当て、在庫の引当済数と明細の引当数を更新する。
+   画面からは直接呼ばず、:need:`FN_001` ・ :need:`FN_003` ・ :need:`BAT_001` から呼ばれる共通機能とする。
+
+.. fn:: 在庫照会
+   :id: FN_005
+   :status: review
+   :owner: 鈴木
+   :category: 在庫
+   :realizes: FR_005
+   :reads: ENT_002, ENT_003
+
+   商品ごとの実在庫・引当済数・有効在庫を表示する。
+
+出荷
+----
+
+.. fn:: 出荷指示
+   :id: FN_006
+   :status: review
+   :owner: 鈴木
+   :category: 出荷
+   :realizes: FR_006
+   :creates: ENT_006
+   :reads: ENT_001, ENT_004, ENT_005
+   :updates: ENT_004
+
+   当日出荷分の引当済み受注から出荷データを作り、受注の状態を「出荷指示済」にする。
+   ピッキングリスト（:need:`RPT_001`）と納品書（:need:`RPT_002`）を出力する。
+
+.. fn:: 出荷実績登録
+   :id: FN_007
+   :status: review
+   :owner: 鈴木
+   :category: 出荷
+   :realizes: FR_007
+   :updates: ENT_003, ENT_004, ENT_006
+
+   出荷完了を登録し、在庫の実在庫と引当済数を減らす。受注の状態を「出荷済」にする。
+
+請求
+----
+
+.. fn:: 請求締め
+   :id: FN_008
+   :status: review
+   :owner: 鈴木
+   :category: 請求
+   :realizes: FR_009
+   :creates: ENT_007
+   :reads: ENT_001, ENT_005, ENT_006
+   :updates: ENT_006
+
+   締め日を指定して、対象顧客の出荷実績を集計した請求データを作り、請求書（:need:`RPT_003`）を出力する。
+   集計した出荷には請求番号を記録し、二重に請求しないようにする。
+
+照会・マスタ
+------------
+
+.. fn:: 受注・出荷状況照会
+   :id: FN_009
+   :status: review
+   :owner: 鈴木
+   :category: 照会
+   :realizes: FR_011
+   :reads: ENT_001, ENT_004, ENT_005, ENT_006
+
+   受注の検索と、引当・出荷・配送状況の表示を行う。
+
+.. fn:: マスタメンテナンス
+   :id: FN_010
+   :status: draft
+   :owner: 鈴木
+   :category: マスタ
+   :realizes: FR_012
+   :creates: ENT_001, ENT_002, ENT_003, ENT_008
+   :reads: ENT_001, ENT_002, ENT_008
+   :updates: ENT_001, ENT_002, ENT_008
+   :deletes: ENT_008
+
+   顧客・商品・ユーザーを登録・変更する。顧客・商品は「使用停止」にするだけで削除しない（ユーザーのみ削除できる）。
+   商品を登録したときは在庫データ（在庫 0）も作る。
+
+機能一覧（表）
+--------------
+
+.. needtable::
+   :types: fn
+   :columns: id;title;category as "区分";status;realizes as "機能要件";realizes_back as "画面・帳票"
+   :style: table
+   :sort: id
+
+.. newbie:: 「共通機能」に注目
+
+   :need:`FN_004` （在庫引当）は画面を持たず、ほかの機能から呼ばれる部品です。
+   こうした共通機能は、呼び出し元が増えるほど修正の影響が広がります。修正するときは、:doc:`crud` と :doc:`../traceability/trace_diagram` で影響範囲を確かめてください。

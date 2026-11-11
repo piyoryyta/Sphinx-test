@@ -1,0 +1,93 @@
+システム構成
+============
+
+.. list-table::
+   :widths: 20 80
+
+   * - 文書番号
+     - BD-001
+   * - 版数
+     - 0.9（レビュー中）
+
+1. 全体構成
+-----------
+
+.. mermaid::
+   :caption: 図 1 システム構成図
+
+   flowchart LR
+     subgraph 社内LAN
+       pc[社内 PC<br/>Edge / Chrome]
+       ht[倉庫ハンディ<br/>Android]
+     end
+     subgraph クラウド[IaaS 東京リージョン]
+       lb[ロードバランサ<br/>社内 IP のみ許可]
+       ap1[AP サーバ #1]
+       ap2[AP サーバ #2]
+       bt[バッチサーバ]
+       db[(DB<br/>PostgreSQL<br/>プライマリ／スタンバイ)]
+       st[(オブジェクト<br/>ストレージ<br/>帳票 PDF・バックアップ)]
+     end
+     edi[(EDI 取引先<br/>SFTP)]
+     tr[(運送会社 API)]
+     ac[(会計システム<br/>社内)]
+     pc -->|HTTPS<br/>VPN| lb
+     ht -->|HTTPS<br/>VPN| lb
+     lb --> ap1 & ap2
+     ap1 & ap2 --> db
+     ap1 & ap2 --> st
+     bt --> db
+     bt --> st
+     edi -->|受注 CSV| bt
+     bt -->|送り状データ| tr
+     bt -->|仕訳 CSV| ac
+
+2. 構成要素
+-----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 40 40
+
+   * - 要素
+     - 内容
+     - 関係する非機能要件
+   * - ロードバランサ
+     - 社内 IP（VPN 経由）以外からの接続を遮断する。
+     - :need:`NFR_005`
+   * - AP サーバ
+     - 2 台構成。1 台が停止しても業務を続けられる。
+     - :need:`NFR_002` 、 :need:`NFR_003`
+   * - バッチサーバ
+     - EDI 取込・送り状送信・会計連携・バックアップを実行する。
+     - :need:`NFR_004`
+   * - DB
+     - プライマリ／スタンバイ構成。毎晩フルバックアップをオブジェクトストレージに保存する。
+     - :need:`NFR_003` 、 :need:`NFR_004` 、 :need:`NFR_007`
+   * - オブジェクトストレージ
+     - 帳票 PDF とバックアップを保存する。
+     - :need:`NFR_004`
+
+3. ソフトウェア構成
+-------------------
+
+.. list-table::
+   :header-rows: 1
+
+   * - 層
+     - 採用技術
+   * - 画面
+     - TypeScript / React（SPA）
+   * - API
+     - Java 21 / Spring Boot（REST API）
+   * - バッチ
+     - Spring Batch（ジョブ管理は cron）
+   * - DB
+     - PostgreSQL 16
+   * - 帳票
+     - JasperReports（PDF 出力）
+
+.. newbie:: 構成図はどこを見るか
+
+   線の向きは「通信を始める側 → 受ける側」です。
+   外部システムとつながる線（EDI・運送会社・会計）は障害や仕様変更の影響を受けやすいので、:doc:`interfaces` とあわせて読んでください。

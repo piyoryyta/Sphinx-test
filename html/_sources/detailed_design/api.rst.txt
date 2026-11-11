@@ -1,0 +1,89 @@
+API 仕様（抜粋）
+================
+
+共通仕様
+--------
+
+- ベース URL: ``/api``
+- 形式: JSON（UTF-8）
+- 認証: ログイン時に発行するセッション Cookie。権限がない場合は ``403`` を返す。
+- エラー応答の形式::
+
+     {"code": "E003", "message": "商品コード P9999 が存在しないか、使用停止です。", "field": "lines[1].productCode"}
+
+API 定義
+--------
+
+.. api:: 受注登録
+   :id: API_001
+   :status: draft
+   :owner: 鈴木
+   :realizes: FN_001
+
+   ``POST /api/orders``
+
+   リクエスト::
+
+      {
+        "customerCode": "C0001",
+        "requestedDate": "2027-04-02",
+        "deliveryTimeSlot": "14-16",
+        "shipTo": "東京都千代田区…",
+        "lines": [
+          {"productCode": "P1001", "quantity": 10},
+          {"productCode": "P2003", "quantity": 50}
+        ]
+      }
+
+   レスポンス（201）::
+
+      {
+        "orderNo": "202704010001",
+        "status": "PARTIALLY_ALLOCATED",
+        "lines": [
+          {"lineNo": 1, "productCode": "P1001", "quantity": 10, "allocatedQty": 10},
+          {"lineNo": 2, "productCode": "P2003", "quantity": 50, "allocatedQty": 30}
+        ]
+      }
+
+   ``deliveryTimeSlot`` は任意（ ``AM`` / ``14-16`` / ``16-18`` / ``18-21`` 、省略または ``null`` は指定なし）。CR_001 で追加。
+
+   エラー: 入力チェック違反は ``400`` （E001 〜 E006）。
+
+.. api:: 在庫引当
+   :id: API_002
+   :status: draft
+   :owner: 鈴木
+   :realizes: FN_004
+
+   ``POST /api/orders/{orderNo}/allocate``
+
+   受注の全明細の引当をやり直す。受注登録・変更の API からは内部呼び出しで同じ処理を使う。
+
+   - 既存の引当を解除してから、明細番号順に引き当てる。
+   - 在庫行は ``SELECT … FOR UPDATE`` でロックし、同時に引き当てても在庫がマイナスにならないようにする。
+   - 状態が「出荷指示済」以降の受注には ``409`` を返す。
+
+.. api:: 受注照会
+   :id: API_003
+   :status: draft
+   :owner: 鈴木
+   :realizes: FN_009
+
+   ``GET /api/orders/{orderNo}``
+
+   受注ヘッダ、明細、引当状況、出荷情報（出荷番号・問い合わせ番号）を返す。存在しない場合は ``404`` 。
+
+API 一覧（表）
+--------------
+
+.. needtable::
+   :types: api
+   :columns: id;title;status;realizes as "機能"
+   :style: table
+   :sort: id
+
+.. newbie:: なぜ「FOR UPDATE」が必要か
+
+   2 人がほぼ同時に同じ商品の最後の 10 個を引き当てると、両方とも「在庫 10 個あり」と読んで、合計 20 個を引き当ててしまうことがあります。
+   ``FOR UPDATE`` で在庫の行をロックすると、2 人目は 1 人目の処理が終わるまで待つので、この問題を防げます。これを「排他制御」と呼びます。

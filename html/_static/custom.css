@@ -1,0 +1,126 @@
+/* ------------------------------------------------------------------
+ * Sphinx-Needs の配色を furo のテーマ変数に合わせる
+ * (sphinx-needs 既定はライト固定の #eee 背景で、ダークモードだと文字が読めない)
+ * furo は変数を body と body[data-theme] に定義するので、:root ではなく body で上書きする
+ * ------------------------------------------------------------------ */
+body {
+  --sn-color-need-bg: var(--color-background-secondary);
+  --sn-color-need-bg-head: var(--color-background-hover);
+  --sn-color-need-border: var(--color-background-border);
+  --sn-color-need-row-border: var(--color-background-border);
+  --sn-color-bg-gray: var(--color-background-secondary);
+  --sn-color-complete-bg-head: var(--color-background-hover);
+  --sn-color-complete-bg-foot: var(--color-background-hover);
+  --sn-color-table-label: var(--color-foreground-primary);
+  --sn-color-table-btn-border: var(--color-background-border);
+  --sn-color-table-popover-bg: var(--color-background-primary);
+  --sn-color-table-popover-fg: var(--color-foreground-primary);
+}
+
+table.need,
+table.need td,
+table.need th {
+  color: var(--color-foreground-primary);
+}
+table.need .needs_meta,
+table.need .needs_label {
+  color: var(--color-foreground-secondary);
+}
+/* need の種類がひと目でわかるよう、左端に種類ごとの色帯を付ける */
+table.need { border-left-width: 6px !important; }
+table.needs_type_iss { border-left-color: #e06666 !important; }
+table.needs_type_biz { border-left-color: #f6b26b !important; }
+table.needs_type_br  { border-left-color: #ffd966 !important; }
+table.needs_type_fr  { border-left-color: #93c47d !important; }
+table.needs_type_nfr { border-left-color: #76a5af !important; }
+table.needs_type_fn,
+table.needs_type_bat { border-left-color: #6fa8dc !important; }
+table.needs_type_scr { border-left-color: #8e7cc3 !important; }
+table.needs_type_rpt,
+table.needs_type_ifc { border-left-color: #c27ba0 !important; }
+table.needs_type_ent,
+table.needs_type_tbl { border-left-color: #999999 !important; }
+table.needs_type_api { border-left-color: #6d9eeb !important; }
+table.needs_type_tc  { border-left-color: #6aa84f !important; }
+
+/* needflow (Graphviz SVG) は白背景の画像なので、ダークモードでは角丸の白いカードとして見せる */
+.needflow img, .needflow object, div.graphviz img, div.graphviz object {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+/* 新卒メモ */
+.admonition.newbie {
+  border-left-color: #2e7d32;
+}
+.admonition.newbie > .admonition-title {
+  background-color: rgba(46, 125, 50, 0.12);
+}
+.admonition.newbie > .admonition-title::before {
+  background-color: #2e7d32;
+}
+
+/* CRUD 図 */
+table.crud-matrix td.crud-cell {
+  text-align: center;
+  font-family: var(--font-stack--monospace);
+  font-weight: bold;
+}
+table.crud-matrix td.crud-C { background-color: rgba(76, 175, 80, 0.20); }
+table.crud-matrix td.crud-R { background-color: rgba(33, 150, 243, 0.12); }
+table.crud-matrix td.crud-U { background-color: rgba(255, 193, 7, 0.22); }
+table.crud-matrix td.crud-D { background-color: rgba(244, 67, 54, 0.20); }
+table.crud-matrix th { font-size: 0.8em; }
+
+/* 表を横に広く使う */
+article table.docutils { font-size: 0.9em; }
+
+/* スナップショット (保存した needflow の SVG)。ダークモードでも白いカードで見せる */
+img.snapshot {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid var(--color-background-border);
+}
+
+/* PR ログ風の表示 */
+.pr-header {
+  border-bottom: 1px solid var(--color-background-border);
+  margin-bottom: 1.5em;
+}
+.pr-state-merged {
+  display: inline-block;
+  background: #8250df;
+  border-radius: 2em;
+  padding: 0 0.9em;
+  margin-bottom: 0.5em;
+}
+.pr-state-merged p {
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0.2em 0;
+}
+.pr-comment {
+  border: 1px solid var(--color-background-border);
+  border-radius: 6px;
+  margin: 1em 0;
+  padding: 0 1em 0.5em;
+}
+.pr-comment > .pr-comment-head {
+  background: var(--color-background-secondary);
+  border-bottom: 1px solid var(--color-background-border);
+  margin: 0 -1em 0.8em;
+  padding: 0.4em 1em;
+  border-radius: 6px 6px 0 0;
+  font-size: 0.9em;
+}
+.pr-comment > .pr-comment-head p { margin: 0; }
+.pr-reply { margin-left: 2.5em; }
+.pr-event {
+  margin: 1em 0 1em 1.2em;
+  padding-left: 1em;
+  border-left: 3px solid var(--color-background-border);
+  font-size: 0.9em;
+  color: var(--color-foreground-secondary);
+}

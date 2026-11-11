@@ -1,0 +1,152 @@
+テーブル定義（抜粋）
+====================
+
+受注登録にかかわる 3 テーブルだけを定義しています。
+共通項目（ ``created_at`` 、 ``created_by`` 、 ``updated_at`` 、 ``updated_by`` ）はすべてのテーブルに持たせ、ここでは省略します。
+
+.. tbl:: t_order（受注）
+   :id: TBL_001
+   :status: draft
+   :owner: 鈴木
+   :realizes: ENT_004
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 25 20 10 10 35
+
+      * - 列名
+        - 型
+        - PK
+        - NULL
+        - 説明
+      * - order_no
+        - char(12)
+        - ○
+        - ×
+        - 受注番号（YYYYMMDD + 4 桁連番）
+      * - customer_code
+        - varchar(5)
+        -
+        - ×
+        - 顧客コード（m_customer への外部キー）
+      * - order_date
+        - date
+        -
+        - ×
+        - 受注日
+      * - requested_date
+        - date
+        -
+        - ×
+        - 希望納期
+      * - delivery_time_slot
+        - varchar(5)
+        -
+        - ○
+        - 希望配送時間帯（指定なしは NULL）。CHECK IN ('AM', '14-16', '16-18', '18-21')。CR_001 で追加
+      * - ship_to
+        - varchar(100)
+        -
+        - ×
+        - 届け先
+      * - channel
+        - varchar(10)
+        -
+        - ×
+        - 受注経路（SCREEN / EDI）
+      * - status
+        - varchar(20)
+        -
+        - ×
+        - 状態（RECEIVED / ALLOCATED / PARTIALLY_ALLOCATED / SHIP_ORDERED / SHIPPED / CANCELED）
+
+.. tbl:: t_order_line（受注明細）
+   :id: TBL_002
+   :status: draft
+   :owner: 鈴木
+   :realizes: ENT_005
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 25 20 10 10 35
+
+      * - 列名
+        - 型
+        - PK
+        - NULL
+        - 説明
+      * - order_no
+        - char(12)
+        - ○
+        - ×
+        - 受注番号（t_order への外部キー）
+      * - line_no
+        - smallint
+        - ○
+        - ×
+        - 明細番号（1 から連番）
+      * - product_code
+        - varchar(5)
+        -
+        - ×
+        - 商品コード（m_product への外部キー）
+      * - quantity
+        - integer
+        -
+        - ×
+        - 数量（CHECK 1 〜 9999）
+      * - unit_price
+        - integer
+        -
+        - ×
+        - 単価（受注時点の標準単価を保存）
+      * - allocated_qty
+        - integer
+        -
+        - ×
+        - 引当数（CHECK 0 〜 quantity）
+
+.. tbl:: t_stock（在庫）
+   :id: TBL_003
+   :status: draft
+   :owner: 鈴木
+   :realizes: ENT_003
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 25 20 10 10 35
+
+      * - 列名
+        - 型
+        - PK
+        - NULL
+        - 説明
+      * - product_code
+        - varchar(5)
+        - ○
+        - ×
+        - 商品コード（m_product への外部キー）
+      * - on_hand
+        - integer
+        -
+        - ×
+        - 実在庫（CHECK 0 以上）
+      * - allocated
+        - integer
+        -
+        - ×
+        - 引当済数（CHECK 0 〜 on_hand）
+
+テーブル一覧（表）
+------------------
+
+.. needtable::
+   :types: tbl
+   :columns: id;title;status;realizes as "エンティティ"
+   :style: table
+   :sort: id
+
+.. newbie:: CHECK 制約はプログラムのバグからデータを守る
+
+   画面や API でチェックしていても、プログラムにバグがあれば不正な値が入ることがあります。
+   ``allocated`` に「0 〜 on_hand」の CHECK 制約を付けておけば、バグがあっても在庫がマイナスになる前に DB がエラーで止めてくれます。

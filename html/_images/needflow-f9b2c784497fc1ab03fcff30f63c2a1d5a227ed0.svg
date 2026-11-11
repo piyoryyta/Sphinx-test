@@ -1,0 +1,528 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="884pt" height="845pt" viewBox="0.00 0.00 884.00 845.00">
+<ns0:g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 841)">
+<ns0:title>needflow</ns0:title>
+<ns0:polygon fill="white" stroke="none" points="-4,4 -4,-841 880,-841 880,4 -4,4" />
+
+<ns0:g id="node1" class="node">
+<ns0:title>ISS_001</ns0:title>
+<ns0:g id="a_node1"><ns0:a ns1:href="..\planning\issues.html#ISS_001" ns1:title="ISS_001" target="_top">
+<ns0:polygon fill="#f4cccc" stroke="black" points="860.25,-113 643.5,-113 639.5,-109 639.5,-55 856.25,-55 860.25,-59 860.25,-113" />
+<ns0:polyline fill="none" stroke="black" points="856.25,-109 639.5,-109" />
+<ns0:polyline fill="none" stroke="black" points="856.25,-109 856.25,-55" />
+<ns0:polyline fill="none" stroke="black" points="856.25,-109 860.25,-113" />
+<ns0:text xml:space="preserve" text-anchor="start" x="647.5" y="-98.6" font-family="Times New Roman,serif" font-size="12.00">&#35506;&#38988;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="647.5" y="-84.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">FAX</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="647.5" y="-70.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#21463;&#27880;&#12398;&#25163;&#20837;&#21147;&#12395;&#12424;&#12427;&#36578;&#35352;&#12511;&#12473;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="647.5" y="-60.5" font-family="Times New Roman,serif" font-size="10.00">ISS_001</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="node2" class="node">
+<ns0:title>ISS_002</ns0:title>
+<ns0:g id="a_node2"><ns0:a ns1:href="..\planning\issues.html#ISS_002" ns1:title="ISS_002" target="_top">
+<ns0:polygon fill="#f4cccc" stroke="black" points="876,-333 627.75,-333 623.75,-329 623.75,-289 872,-289 876,-293 876,-333" />
+<ns0:polyline fill="none" stroke="black" points="872,-329 623.75,-329" />
+<ns0:polyline fill="none" stroke="black" points="872,-329 872,-289" />
+<ns0:polyline fill="none" stroke="black" points="872,-329 876,-333" />
+<ns0:text xml:space="preserve" text-anchor="start" x="631.75" y="-318.6" font-family="Times New Roman,serif" font-size="12.00">&#35506;&#38988;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="631.75" y="-304.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#22312;&#24235;&#25968;&#12398;&#26356;&#26032;&#36933;&#12428;&#12395;&#12424;&#12427;&#27424;&#21697;&#21463;&#27880;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="631.75" y="-294.5" font-family="Times New Roman,serif" font-size="10.00">ISS_002</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="node3" class="node">
+<ns0:title>ISS_003</ns0:title>
+<ns0:g id="a_node3"><ns0:a ns1:href="..\planning\issues.html#ISS_003" ns1:title="ISS_003" target="_top">
+<ns0:polygon fill="#f4cccc" stroke="black" points="860.25,-478 643.5,-478 639.5,-474 639.5,-434 856.25,-434 860.25,-438 860.25,-478" />
+<ns0:polyline fill="none" stroke="black" points="856.25,-474 639.5,-474" />
+<ns0:polyline fill="none" stroke="black" points="856.25,-474 856.25,-434" />
+<ns0:polyline fill="none" stroke="black" points="856.25,-474 860.25,-478" />
+<ns0:text xml:space="preserve" text-anchor="start" x="647.5" y="-463.6" font-family="Times New Roman,serif" font-size="12.00">&#35506;&#38988;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="647.5" y="-449.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#32025;&#12398;&#20986;&#33655;&#25351;&#31034;&#12395;&#12424;&#12427;&#20986;&#33655;&#28431;&#12428;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="647.5" y="-439.5" font-family="Times New Roman,serif" font-size="10.00">ISS_003</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="node4" class="node">
+<ns0:title>ISS_004</ns0:title>
+<ns0:g id="a_node4"><ns0:a ns1:href="..\planning\issues.html#ISS_004" ns1:title="ISS_004" target="_top">
+<ns0:polygon fill="#f4cccc" stroke="black" points="868.12,-631 635.62,-631 631.62,-627 631.62,-587 864.12,-587 868.12,-591 868.12,-631" />
+<ns0:polyline fill="none" stroke="black" points="864.12,-627 631.62,-627" />
+<ns0:polyline fill="none" stroke="black" points="864.12,-627 864.12,-587" />
+<ns0:polyline fill="none" stroke="black" points="864.12,-627 868.12,-631" />
+<ns0:text xml:space="preserve" text-anchor="start" x="639.62" y="-616.6" font-family="Times New Roman,serif" font-size="12.00">&#35506;&#38988;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="639.62" y="-602.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#26376;&#26411;&#12398;&#35531;&#27714;&#26360;&#20316;&#25104;&#12408;&#12398;&#26989;&#21209;&#38598;&#20013;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="639.62" y="-592.5" font-family="Times New Roman,serif" font-size="10.00">ISS_004</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="node5" class="node">
+<ns0:title>ISS_005</ns0:title>
+<ns0:g id="a_node5"><ns0:a ns1:href="..\planning\issues.html#ISS_005" ns1:title="ISS_005" target="_top">
+<ns0:polygon fill="#f4cccc" stroke="black" points="876,-250 627.75,-250 623.75,-246 623.75,-192 872,-192 876,-196 876,-250" />
+<ns0:polyline fill="none" stroke="black" points="872,-246 623.75,-246" />
+<ns0:polyline fill="none" stroke="black" points="872,-246 872,-192" />
+<ns0:polyline fill="none" stroke="black" points="872,-246 876,-250" />
+<ns0:text xml:space="preserve" text-anchor="start" x="631.75" y="-235.6" font-family="Times New Roman,serif" font-size="12.00">&#35506;&#38988;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="631.75" y="-221.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#20986;&#33655;&#29366;&#27841;&#12398;&#21839;&#12356;&#21512;&#12431;&#12379;&#12395;&#21363;&#31572;&#12391;&#12365;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="631.75" y="-207.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#12394;&#12356;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="631.75" y="-197.5" font-family="Times New Roman,serif" font-size="10.00">ISS_005</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="node6" class="node">
+<ns0:title>ISS_006</ns0:title>
+<ns0:g id="a_node6"><ns0:a ns1:href="..\planning\issues.html#ISS_006" ns1:title="ISS_006" target="_top">
+<ns0:polygon fill="#f4cccc" stroke="black" points="876,-790 627.75,-790 623.75,-786 623.75,-732 872,-732 876,-736 876,-790" />
+<ns0:polyline fill="none" stroke="black" points="872,-786 623.75,-786" />
+<ns0:polyline fill="none" stroke="black" points="872,-786 872,-732" />
+<ns0:polyline fill="none" stroke="black" points="872,-786 876,-790" />
+<ns0:text xml:space="preserve" text-anchor="start" x="631.75" y="-775.6" font-family="Times New Roman,serif" font-size="12.00">&#35506;&#38988;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="631.75" y="-761.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Excel</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="631.75" y="-747.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#21488;&#24115;&#12398;&#23646;&#20154;&#21270;&#12392;&#12487;&#12540;&#12479;&#28040;&#22833;&#12522;&#12473;&#12463;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="631.75" y="-737.5" font-family="Times New Roman,serif" font-size="10.00">ISS_006</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="node7" class="node">
+<ns0:title>BR_001</ns0:title>
+<ns0:g id="a_node7"><ns0:a ns1:href="..\requirements\business_requirements.html#BR_001" ns1:title="BR_001" target="_top">
+<ns0:polygon fill="#fff2cc" stroke="black" points="524.75,-113 276.5,-113 272.5,-109 272.5,-55 520.75,-55 524.75,-59 524.75,-113" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-109 272.5,-109" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-109 520.75,-55" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-109 524.75,-113" />
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-98.6" font-family="Times New Roman,serif" font-size="12.00">&#26989;&#21209;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-84.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#21463;&#27880;&#24773;&#22577;&#12434;&#38651;&#23376;&#30340;&#12395;&#19968;&#20803;&#30331;&#37682;&#12391;&#12365;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-70.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#12427;&#12371;&#12392;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-60.5" font-family="Times New Roman,serif" font-size="10.00">BR_001</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge1" class="edge">
+<ns0:title>BR_001-&gt;ISS_001</ns0:title>
+<ns0:path fill="none" stroke="black" d="M525.22,-84C558.69,-84 594.77,-84 627.99,-84" />
+<ns0:polygon fill="black" stroke="black" points="637.91,-84 627.91,-88.5 634.13,-84 627.91,-84 627.91,-84 627.91,-84 634.13,-84 627.91,-79.5 637.91,-84" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="574.25" y="-86.45" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node8" class="node">
+<ns0:title>BR_002</ns0:title>
+<ns0:g id="a_node8"><ns0:a ns1:href="..\requirements\business_requirements.html#BR_002" ns1:title="BR_002" target="_top">
+<ns0:polygon fill="#fff2cc" stroke="black" points="524.75,-340 276.5,-340 272.5,-336 272.5,-282 520.75,-282 524.75,-286 524.75,-340" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-336 272.5,-336" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-336 520.75,-282" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-336 524.75,-340" />
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-325.6" font-family="Times New Roman,serif" font-size="12.00">&#26989;&#21209;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-311.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#21463;&#27880;&#26178;&#28857;&#12391;&#22312;&#24235;&#12434;&#24341;&#12365;&#24403;&#12390;&#12425;&#12428;&#12427;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-297.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#12371;&#12392;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-287.5" font-family="Times New Roman,serif" font-size="10.00">BR_002</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge2" class="edge">
+<ns0:title>BR_002-&gt;ISS_002</ns0:title>
+<ns0:path fill="none" stroke="black" d="M525.22,-311C553.57,-311 583.8,-311 612.57,-311" />
+<ns0:polygon fill="black" stroke="black" points="622.3,-311 612.3,-315.5 618.52,-311 612.3,-311 612.3,-311 612.3,-311 618.52,-311 612.3,-306.5 622.3,-311" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="574.25" y="-313.45" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node9" class="node">
+<ns0:title>BR_003</ns0:title>
+<ns0:g id="a_node9"><ns0:a ns1:href="..\requirements\business_requirements.html#BR_003" ns1:title="BR_003" target="_top">
+<ns0:polygon fill="#fff2cc" stroke="black" points="524.75,-485 276.5,-485 272.5,-481 272.5,-427 520.75,-427 524.75,-431 524.75,-485" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-481 272.5,-481" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-481 520.75,-427" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-481 524.75,-485" />
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-470.6" font-family="Times New Roman,serif" font-size="12.00">&#26989;&#21209;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-456.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#20986;&#33655;&#25351;&#31034;&#12434;&#20489;&#24235;&#12408;&#38651;&#23376;&#30340;&#12395;&#20253;&#36948;&#12391;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-442.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#12365;&#12427;&#12371;&#12392;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-432.5" font-family="Times New Roman,serif" font-size="10.00">BR_003</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge3" class="edge">
+<ns0:title>BR_003-&gt;ISS_003</ns0:title>
+<ns0:path fill="none" stroke="black" d="M525.22,-456C558.69,-456 594.77,-456 627.99,-456" />
+<ns0:polygon fill="black" stroke="black" points="637.91,-456 627.91,-460.5 634.13,-456 627.91,-456 627.91,-456 627.91,-456 634.13,-456 627.91,-451.5 637.91,-456" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="574.25" y="-458.45" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node10" class="node">
+<ns0:title>BR_004</ns0:title>
+<ns0:g id="a_node10"><ns0:a ns1:href="..\requirements\business_requirements.html#BR_004" ns1:title="BR_004" target="_top">
+<ns0:polygon fill="#fff2cc" stroke="black" points="524.75,-685 276.5,-685 272.5,-681 272.5,-627 520.75,-627 524.75,-631 524.75,-685" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-681 272.5,-681" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-681 520.75,-627" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-681 524.75,-685" />
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-670.6" font-family="Times New Roman,serif" font-size="12.00">&#26989;&#21209;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-656.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#20986;&#33655;&#23455;&#32318;&#12363;&#12425;&#35531;&#27714;&#26360;&#12434;&#33258;&#21205;&#20316;&#25104;&#12391;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-642.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#12365;&#12427;&#12371;&#12392;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-632.5" font-family="Times New Roman,serif" font-size="10.00">BR_004</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge4" class="edge">
+<ns0:title>BR_004-&gt;ISS_004</ns0:title>
+<ns0:path fill="none" stroke="black" d="M525.22,-639.1C556.18,-634.93 589.38,-630.46 620.48,-626.28" />
+<ns0:polygon fill="black" stroke="black" points="630.17,-624.97 620.86,-630.77 626.43,-625.48 620.26,-626.31 620.26,-626.31 620.26,-626.31 626.43,-625.48 619.66,-621.85 630.17,-624.97" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="574.25" y="-639.16" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node11" class="node">
+<ns0:title>BR_005</ns0:title>
+<ns0:g id="a_node11"><ns0:a ns1:href="..\requirements\business_requirements.html#BR_005" ns1:title="BR_005" target="_top">
+<ns0:polygon fill="#fff2cc" stroke="black" points="524.75,-609 276.5,-609 272.5,-605 272.5,-551 520.75,-551 524.75,-555 524.75,-609" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-605 272.5,-605" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-605 520.75,-551" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-605 524.75,-609" />
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-594.6" font-family="Times New Roman,serif" font-size="12.00">&#26989;&#21209;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-580.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#22770;&#19978;&#12434;&#20250;&#35336;&#12471;&#12473;&#12486;&#12512;&#12408;&#33258;&#21205;&#36899;&#25658;&#12391;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-566.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#12365;&#12427;&#12371;&#12392;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-556.5" font-family="Times New Roman,serif" font-size="10.00">BR_005</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge5" class="edge">
+<ns0:title>BR_005-&gt;ISS_004</ns0:title>
+<ns0:path fill="none" stroke="black" d="M525.22,-590.43C556.18,-593 589.38,-595.76 620.48,-598.34" />
+<ns0:polygon fill="black" stroke="black" points="630.17,-599.14 619.83,-602.8 626.4,-598.83 620.2,-598.32 620.2,-598.32 620.2,-598.32 626.4,-598.83 620.57,-593.83 630.17,-599.14" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="574.25" y="-599.55" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node12" class="node">
+<ns0:title>BR_006</ns0:title>
+<ns0:g id="a_node12"><ns0:a ns1:href="..\requirements\business_requirements.html#BR_006" ns1:title="BR_006" target="_top">
+<ns0:polygon fill="#fff2cc" stroke="black" points="524.75,-250 276.5,-250 272.5,-246 272.5,-192 520.75,-192 524.75,-196 524.75,-250" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-246 272.5,-246" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-246 520.75,-192" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-246 524.75,-250" />
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-235.6" font-family="Times New Roman,serif" font-size="12.00">&#26989;&#21209;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-221.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#21463;&#27880;&#12539;&#20986;&#33655;&#12398;&#29366;&#27841;&#12434;&#21363;&#26178;&#12395;&#29031;&#20250;&#12391;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-207.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#12365;&#12427;&#12371;&#12392;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-197.5" font-family="Times New Roman,serif" font-size="10.00">BR_006</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge6" class="edge">
+<ns0:title>BR_006-&gt;ISS_005</ns0:title>
+<ns0:path fill="none" stroke="black" d="M525.22,-221C553.57,-221 583.8,-221 612.57,-221" />
+<ns0:polygon fill="black" stroke="black" points="622.3,-221 612.3,-225.5 618.52,-221 612.3,-221 612.3,-221 612.3,-221 618.52,-221 612.3,-216.5 622.3,-221" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="574.25" y="-223.45" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node13" class="node">
+<ns0:title>BR_007</ns0:title>
+<ns0:g id="a_node13"><ns0:a ns1:href="..\requirements\business_requirements.html#BR_007" ns1:title="BR_007" target="_top">
+<ns0:polygon fill="#fff2cc" stroke="black" points="524.75,-837 276.5,-837 272.5,-833 272.5,-779 520.75,-779 524.75,-783 524.75,-837" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-833 272.5,-833" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-833 520.75,-779" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-833 524.75,-837" />
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-822.6" font-family="Times New Roman,serif" font-size="12.00">&#26989;&#21209;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-808.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#39015;&#23458;&#12539;&#21830;&#21697;&#12398;&#24773;&#22577;&#12434;&#19968;&#20803;&#31649;&#29702;&#12391;&#12365;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-794.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#12427;&#12371;&#12392;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-784.5" font-family="Times New Roman,serif" font-size="10.00">BR_007</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge7" class="edge">
+<ns0:title>BR_007-&gt;ISS_006</ns0:title>
+<ns0:path fill="none" stroke="black" d="M525.22,-791.1C553.57,-787.28 583.8,-783.21 612.57,-779.34" />
+<ns0:polygon fill="black" stroke="black" points="622.31,-778.03 613,-783.83 618.56,-778.54 612.4,-779.37 612.4,-779.37 612.4,-779.37 618.56,-778.54 611.8,-774.91 622.31,-778.03" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="574.25" y="-791.16" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node14" class="node">
+<ns0:title>BR_008</ns0:title>
+<ns0:g id="a_node14"><ns0:a ns1:href="..\requirements\business_requirements.html#BR_008" ns1:title="BR_008" target="_top">
+<ns0:polygon fill="#fff2cc" stroke="black" points="524.75,-761 276.5,-761 272.5,-757 272.5,-703 520.75,-703 524.75,-707 524.75,-761" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-757 272.5,-757" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-757 520.75,-703" />
+<ns0:polyline fill="none" stroke="black" points="520.75,-757 524.75,-761" />
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-746.6" font-family="Times New Roman,serif" font-size="12.00">&#26989;&#21209;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-732.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#12487;&#12540;&#12479;&#12434;&#23433;&#20840;&#12395;&#20445;&#20840;&#12375;&#12289;&#21033;&#29992;&#32773;&#12434;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-718.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#31649;&#29702;&#12391;&#12365;&#12427;&#12371;&#12392;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="280.5" y="-708.5" font-family="Times New Roman,serif" font-size="10.00">BR_008</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge8" class="edge">
+<ns0:title>BR_008-&gt;ISS_006</ns0:title>
+<ns0:path fill="none" stroke="black" d="M525.22,-742.43C553.57,-744.78 583.8,-747.29 612.57,-749.68" />
+<ns0:polygon fill="black" stroke="black" points="622.3,-750.49 611.96,-754.15 618.53,-750.18 612.34,-749.66 612.34,-749.66 612.34,-749.66 618.53,-750.18 612.71,-745.18 622.3,-750.49" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="574.25" y="-751.55" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node15" class="node">
+<ns0:title>FR_001</ns0:title>
+<ns0:g id="a_node15"><ns0:a ns1:href="..\requirements\functional_requirements.html#FR_001" ns1:title="FR_001" target="_top">
+<ns0:polygon fill="#d9ead3" stroke="black" points="173.5,-168 4,-168 0,-164 0,-124 169.5,-124 173.5,-128 173.5,-168" />
+<ns0:polyline fill="none" stroke="black" points="169.5,-164 0,-164" />
+<ns0:polyline fill="none" stroke="black" points="169.5,-164 169.5,-124" />
+<ns0:polyline fill="none" stroke="black" points="169.5,-164 173.5,-168" />
+<ns0:text xml:space="preserve" text-anchor="start" x="8" y="-153.6" font-family="Times New Roman,serif" font-size="12.00">&#27231;&#33021;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="8" y="-139.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#21463;&#27880;&#30331;&#37682;&#65288;&#30011;&#38754;&#20837;&#21147;&#65289;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="8" y="-129.5" font-family="Times New Roman,serif" font-size="10.00">FR_001</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge9" class="edge">
+<ns0:title>FR_001-&gt;BR_001</ns0:title>
+<ns0:path fill="none" stroke="black" d="M173.66,-128.81C200.77,-123.39 231.44,-117.25 261.18,-111.3" />
+<ns0:polygon fill="black" stroke="black" points="270.9,-109.36 261.97,-115.73 267.19,-110.1 261.09,-111.32 261.09,-111.32 261.09,-111.32 267.19,-110.1 260.21,-106.91 270.9,-109.36" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="223" y="-126.63" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node16" class="node">
+<ns0:title>FR_002</ns0:title>
+<ns0:g id="a_node16"><ns0:a ns1:href="..\requirements\functional_requirements.html#FR_002" ns1:title="FR_002" target="_top">
+<ns0:polygon fill="#d9ead3" stroke="black" points="154,-106 23.5,-106 19.5,-102 19.5,-62 150,-62 154,-66 154,-106" />
+<ns0:polyline fill="none" stroke="black" points="150,-102 19.5,-102" />
+<ns0:polyline fill="none" stroke="black" points="150,-102 150,-62" />
+<ns0:polyline fill="none" stroke="black" points="150,-102 154,-106" />
+<ns0:text xml:space="preserve" text-anchor="start" x="27.5" y="-91.6" font-family="Times New Roman,serif" font-size="12.00">&#27231;&#33021;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="27.5" y="-77.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#21463;&#27880;&#21462;&#36796;&#65288;EDI&#65289;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="27.5" y="-67.5" font-family="Times New Roman,serif" font-size="10.00">FR_002</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge10" class="edge">
+<ns0:title>FR_002-&gt;BR_001</ns0:title>
+<ns0:path fill="none" stroke="black" d="M154.23,-84C185.55,-84 224.12,-84 261.25,-84" />
+<ns0:polygon fill="black" stroke="black" points="270.97,-84 260.97,-88.5 267.19,-84 260.97,-84 260.97,-84 260.97,-84 267.19,-84 260.97,-79.5 270.97,-84" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="223" y="-86.45" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node17" class="node">
+<ns0:title>FR_003</ns0:title>
+<ns0:g id="a_node17"><ns0:a ns1:href="..\requirements\functional_requirements.html#FR_003" ns1:title="FR_003" target="_top">
+<ns0:polygon fill="#d9ead3" stroke="black" points="149.88,-44 27.62,-44 23.62,-40 23.62,0 145.88,0 149.88,-4 149.88,-44" />
+<ns0:polyline fill="none" stroke="black" points="145.88,-40 23.62,-40" />
+<ns0:polyline fill="none" stroke="black" points="145.88,-40 145.88,0" />
+<ns0:polyline fill="none" stroke="black" points="145.88,-40 149.88,-44" />
+<ns0:text xml:space="preserve" text-anchor="start" x="31.62" y="-29.6" font-family="Times New Roman,serif" font-size="12.00">&#27231;&#33021;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="31.62" y="-15.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#21463;&#27880;&#22793;&#26356;&#12539;&#21462;&#28040;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="31.62" y="-5.5" font-family="Times New Roman,serif" font-size="10.00">FR_003</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge11" class="edge">
+<ns0:title>FR_003-&gt;BR_001</ns0:title>
+<ns0:path fill="none" stroke="black" d="M150.09,-34.47C182.15,-40.89 222.58,-48.98 261.41,-56.75" />
+<ns0:polygon fill="black" stroke="black" points="271.12,-58.69 260.43,-61.14 267.41,-57.95 261.31,-56.73 261.31,-56.73 261.31,-56.73 267.41,-57.95 262.2,-52.31 271.12,-58.69" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="223" y="-57.31" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node18" class="node">
+<ns0:title>FR_004</ns0:title>
+<ns0:g id="a_node18"><ns0:a ns1:href="..\requirements\functional_requirements.html#FR_004" ns1:title="FR_004" target="_top">
+<ns0:polygon fill="#d9ead3" stroke="black" points="142,-354 35.5,-354 31.5,-350 31.5,-310 138,-310 142,-314 142,-354" />
+<ns0:polyline fill="none" stroke="black" points="138,-350 31.5,-350" />
+<ns0:polyline fill="none" stroke="black" points="138,-350 138,-310" />
+<ns0:polyline fill="none" stroke="black" points="138,-350 142,-354" />
+<ns0:text xml:space="preserve" text-anchor="start" x="39.5" y="-339.6" font-family="Times New Roman,serif" font-size="12.00">&#27231;&#33021;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="39.5" y="-325.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#22312;&#24235;&#33258;&#21205;&#24341;&#24403;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="39.5" y="-315.5" font-family="Times New Roman,serif" font-size="10.00">FR_004</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge12" class="edge">
+<ns0:title>FR_004-&gt;BR_002</ns0:title>
+<ns0:path fill="none" stroke="black" d="M142.44,-328.29C175.45,-326.06 219.11,-323.1 260.96,-320.26" />
+<ns0:polygon fill="black" stroke="black" points="270.92,-319.59 261.24,-324.75 267.14,-319.84 260.94,-320.26 260.94,-320.26 260.94,-320.26 267.14,-319.84 260.64,-315.77 270.92,-319.59" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="223" y="-327.06" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node19" class="node">
+<ns0:title>FR_005</ns0:title>
+<ns0:g id="a_node19"><ns0:a ns1:href="..\requirements\functional_requirements.html#FR_005" ns1:title="FR_005" target="_top">
+<ns0:polygon fill="#d9ead3" stroke="black" points="126.25,-292 51.25,-292 47.25,-288 47.25,-248 122.25,-248 126.25,-252 126.25,-292" />
+<ns0:polyline fill="none" stroke="black" points="122.25,-288 47.25,-288" />
+<ns0:polyline fill="none" stroke="black" points="122.25,-288 122.25,-248" />
+<ns0:polyline fill="none" stroke="black" points="122.25,-288 126.25,-292" />
+<ns0:text xml:space="preserve" text-anchor="start" x="55.25" y="-277.6" font-family="Times New Roman,serif" font-size="12.00">&#27231;&#33021;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="55.25" y="-263.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#22312;&#24235;&#29031;&#20250;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="55.25" y="-253.5" font-family="Times New Roman,serif" font-size="10.00">FR_005</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge13" class="edge">
+<ns0:title>FR_005-&gt;BR_002</ns0:title>
+<ns0:path fill="none" stroke="black" d="M126.68,-275.15C160.68,-279.65 212.13,-286.46 261.09,-292.93" />
+<ns0:polygon fill="black" stroke="black" points="270.93,-294.24 260.43,-297.39 267.19,-293.74 261.02,-292.93 261.02,-292.93 261.02,-292.93 267.19,-293.74 261.61,-288.46 270.93,-294.24" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="223" y="-294.18" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="edge14" class="edge">
+<ns0:title>FR_005-&gt;BR_006</ns0:title>
+<ns0:path fill="none" stroke="black" d="M126.68,-263.84C160.68,-258.47 212.13,-250.33 261.09,-242.59" />
+<ns0:polygon fill="black" stroke="black" points="270.94,-241.03 261.76,-247.04 267.2,-241.62 261.06,-242.59 261.06,-242.59 261.06,-242.59 267.2,-241.62 260.36,-238.15 270.94,-241.03" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="223" y="-255.2" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node20" class="node">
+<ns0:title>FR_006</ns0:title>
+<ns0:g id="a_node20"><ns0:a ns1:href="..\requirements\functional_requirements.html#FR_006" ns1:title="FR_006" target="_top">
+<ns0:polygon fill="#d9ead3" stroke="black" points="142,-540 35.5,-540 31.5,-536 31.5,-496 138,-496 142,-500 142,-540" />
+<ns0:polyline fill="none" stroke="black" points="138,-536 31.5,-536" />
+<ns0:polyline fill="none" stroke="black" points="138,-536 138,-496" />
+<ns0:polyline fill="none" stroke="black" points="138,-536 142,-540" />
+<ns0:text xml:space="preserve" text-anchor="start" x="39.5" y="-525.6" font-family="Times New Roman,serif" font-size="12.00">&#27231;&#33021;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="39.5" y="-511.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#20986;&#33655;&#25351;&#31034;&#20316;&#25104;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="39.5" y="-501.5" font-family="Times New Roman,serif" font-size="10.00">FR_006</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge15" class="edge">
+<ns0:title>FR_006-&gt;BR_003</ns0:title>
+<ns0:path fill="none" stroke="black" d="M142.44,-507.06C175.52,-500.44 219.3,-491.68 261.23,-483.29" />
+<ns0:polygon fill="black" stroke="black" points="270.94,-481.35 262.02,-487.72 267.23,-482.09 261.13,-483.31 261.13,-483.31 261.13,-483.31 267.23,-482.09 260.25,-478.9 270.94,-481.35" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="223" y="-498.63" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node21" class="node">
+<ns0:title>FR_007</ns0:title>
+<ns0:g id="a_node21"><ns0:a ns1:href="..\requirements\functional_requirements.html#FR_007" ns1:title="FR_007" target="_top">
+<ns0:polygon fill="#d9ead3" stroke="black" points="142,-478 35.5,-478 31.5,-474 31.5,-434 138,-434 142,-438 142,-478" />
+<ns0:polyline fill="none" stroke="black" points="138,-474 31.5,-474" />
+<ns0:polyline fill="none" stroke="black" points="138,-474 138,-434" />
+<ns0:polyline fill="none" stroke="black" points="138,-474 142,-478" />
+<ns0:text xml:space="preserve" text-anchor="start" x="39.5" y="-463.6" font-family="Times New Roman,serif" font-size="12.00">&#27231;&#33021;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="39.5" y="-449.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#20986;&#33655;&#23455;&#32318;&#30331;&#37682;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="39.5" y="-439.5" font-family="Times New Roman,serif" font-size="10.00">FR_007</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge16" class="edge">
+<ns0:title>FR_007-&gt;BR_003</ns0:title>
+<ns0:path fill="none" stroke="black" d="M142.44,-456C175.45,-456 219.11,-456 260.96,-456" />
+<ns0:polygon fill="black" stroke="black" points="270.91,-456 260.91,-460.5 267.13,-456 260.91,-456 260.91,-456 260.91,-456 267.13,-456 260.91,-451.5 270.91,-456" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="223" y="-458.45" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node22" class="node">
+<ns0:title>FR_008</ns0:title>
+<ns0:g id="a_node22"><ns0:a ns1:href="..\requirements\functional_requirements.html#FR_008" ns1:title="FR_008" target="_top">
+<ns0:polygon fill="#d9ead3" stroke="black" points="157.75,-416 19.75,-416 15.75,-412 15.75,-372 153.75,-372 157.75,-376 157.75,-416" />
+<ns0:polyline fill="none" stroke="black" points="153.75,-412 15.75,-412" />
+<ns0:polyline fill="none" stroke="black" points="153.75,-412 153.75,-372" />
+<ns0:polyline fill="none" stroke="black" points="153.75,-412 157.75,-416" />
+<ns0:text xml:space="preserve" text-anchor="start" x="23.75" y="-401.6" font-family="Times New Roman,serif" font-size="12.00">&#27231;&#33021;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="23.75" y="-387.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#36865;&#12426;&#29366;&#12487;&#12540;&#12479;&#36899;&#25658;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="23.75" y="-377.5" font-family="Times New Roman,serif" font-size="10.00">FR_008</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge17" class="edge">
+<ns0:title>FR_008-&gt;BR_003</ns0:title>
+<ns0:path fill="none" stroke="black" d="M158.07,-408.07C188.65,-414.19 225.58,-421.58 261.19,-428.7" />
+<ns0:polygon fill="black" stroke="black" points="271,-430.66 260.31,-433.11 267.29,-429.92 261.19,-428.7 261.19,-428.7 261.19,-428.7 267.29,-429.92 262.07,-424.29 271,-430.66" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="223" y="-429.31" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node23" class="node">
+<ns0:title>FR_009</ns0:title>
+<ns0:g id="a_node23"><ns0:a ns1:href="..\requirements\functional_requirements.html#FR_009" ns1:title="FR_009" target="_top">
+<ns0:polygon fill="#d9ead3" stroke="black" points="134.12,-678 43.38,-678 39.38,-674 39.38,-634 130.12,-634 134.12,-638 134.12,-678" />
+<ns0:polyline fill="none" stroke="black" points="130.12,-674 39.38,-674" />
+<ns0:polyline fill="none" stroke="black" points="130.12,-674 130.12,-634" />
+<ns0:polyline fill="none" stroke="black" points="130.12,-674 134.12,-678" />
+<ns0:text xml:space="preserve" text-anchor="start" x="47.38" y="-663.6" font-family="Times New Roman,serif" font-size="12.00">&#27231;&#33021;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="47.38" y="-649.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#35531;&#27714;&#26360;&#30330;&#34892;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="47.38" y="-639.5" font-family="Times New Roman,serif" font-size="10.00">FR_009</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge18" class="edge">
+<ns0:title>FR_009-&gt;BR_004</ns0:title>
+<ns0:path fill="none" stroke="black" d="M134.48,-656C168.22,-656 215.63,-656 260.93,-656" />
+<ns0:polygon fill="black" stroke="black" points="270.86,-656 260.86,-660.5 267.08,-656 260.86,-656 260.86,-656 260.86,-656 267.08,-656 260.86,-651.5 270.86,-656" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="223" y="-658.45" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node24" class="node">
+<ns0:title>FR_010</ns0:title>
+<ns0:g id="a_node24"><ns0:a ns1:href="..\requirements\functional_requirements.html#FR_010" ns1:title="FR_010" target="_top">
+<ns0:polygon fill="#d9ead3" stroke="black" points="173.5,-602 4,-602 0,-598 0,-558 169.5,-558 173.5,-562 173.5,-602" />
+<ns0:polyline fill="none" stroke="black" points="169.5,-598 0,-598" />
+<ns0:polyline fill="none" stroke="black" points="169.5,-598 169.5,-558" />
+<ns0:polyline fill="none" stroke="black" points="169.5,-598 173.5,-602" />
+<ns0:text xml:space="preserve" text-anchor="start" x="8" y="-587.6" font-family="Times New Roman,serif" font-size="12.00">&#27231;&#33021;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="8" y="-573.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#20250;&#35336;&#12471;&#12473;&#12486;&#12512;&#22770;&#19978;&#36899;&#25658;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="8" y="-563.5" font-family="Times New Roman,serif" font-size="10.00">FR_010</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge19" class="edge">
+<ns0:title>FR_010-&gt;BR_005</ns0:title>
+<ns0:path fill="none" stroke="black" d="M173.66,-580C200.77,-580 231.44,-580 261.18,-580" />
+<ns0:polygon fill="black" stroke="black" points="270.87,-580 260.87,-584.5 267.09,-580 260.87,-580 260.87,-580 260.87,-580 267.09,-580 260.87,-575.5 270.87,-580" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="223" y="-582.45" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node25" class="node">
+<ns0:title>FR_011</ns0:title>
+<ns0:g id="a_node25"><ns0:a ns1:href="..\requirements\functional_requirements.html#FR_011" ns1:title="FR_011" target="_top">
+<ns0:polygon fill="#d9ead3" stroke="black" points="165.62,-230 11.88,-230 7.88,-226 7.88,-186 161.62,-186 165.62,-190 165.62,-230" />
+<ns0:polyline fill="none" stroke="black" points="161.62,-226 7.88,-226" />
+<ns0:polyline fill="none" stroke="black" points="161.62,-226 161.62,-186" />
+<ns0:polyline fill="none" stroke="black" points="161.62,-226 165.62,-230" />
+<ns0:text xml:space="preserve" text-anchor="start" x="15.88" y="-215.6" font-family="Times New Roman,serif" font-size="12.00">&#27231;&#33021;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="15.88" y="-201.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#21463;&#27880;&#12539;&#20986;&#33655;&#29366;&#27841;&#29031;&#20250;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="15.88" y="-191.5" font-family="Times New Roman,serif" font-size="10.00">FR_011</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge20" class="edge">
+<ns0:title>FR_011-&gt;BR_006</ns0:title>
+<ns0:path fill="none" stroke="black" d="M165.82,-209.42C193.8,-210.07 225.57,-211 254.5,-212.25 256.78,-212.35 259.09,-212.45 261.41,-212.56" />
+<ns0:polygon fill="black" stroke="black" points="271.14,-213.03 260.94,-217.04 267.37,-212.84 261.15,-212.55 261.15,-212.55 261.15,-212.55 267.37,-212.84 261.37,-208.05 271.14,-213.03" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="223" y="-214.7" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+
+<ns0:g id="node26" class="node">
+<ns0:title>FR_012</ns0:title>
+<ns0:g id="a_node26"><ns0:a ns1:href="..\requirements\functional_requirements.html#FR_012" ns1:title="FR_012" target="_top">
+<ns0:polygon fill="#d9ead3" stroke="black" points="165.62,-830 11.88,-830 7.88,-826 7.88,-786 161.62,-786 165.62,-790 165.62,-830" />
+<ns0:polyline fill="none" stroke="black" points="161.62,-826 7.88,-826" />
+<ns0:polyline fill="none" stroke="black" points="161.62,-826 161.62,-786" />
+<ns0:polyline fill="none" stroke="black" points="161.62,-826 165.62,-830" />
+<ns0:text xml:space="preserve" text-anchor="start" x="15.88" y="-815.6" font-family="Times New Roman,serif" font-size="12.00">&#27231;&#33021;&#35201;&#20214;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="15.88" y="-801.7" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">&#12510;&#12473;&#12479;&#12513;&#12531;&#12486;&#12490;&#12531;&#12473;</ns0:text>
+<ns0:text xml:space="preserve" text-anchor="start" x="15.88" y="-791.5" font-family="Times New Roman,serif" font-size="10.00">FR_012</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge21" class="edge">
+<ns0:title>FR_012-&gt;BR_007</ns0:title>
+<ns0:path fill="none" stroke="black" d="M165.94,-808C194.86,-808 228.54,-808 261.13,-808" />
+<ns0:polygon fill="black" stroke="black" points="270.91,-808 260.91,-812.5 267.12,-808 260.91,-808 260.91,-808 260.91,-808 267.12,-808 260.91,-803.5 270.91,-808" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="223" y="-810.45" font-family="Times New Roman,serif" font-size="14.00">&#20805;&#36275;&#12377;&#12427;</ns0:text>
+</ns0:g>
+</ns0:g>
+</ns0:svg>

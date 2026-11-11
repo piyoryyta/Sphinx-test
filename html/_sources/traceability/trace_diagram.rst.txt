@@ -1,0 +1,43 @@
+トレース図
+==========
+
+need のリンクを Graphviz で図にしたものです（Sphinx-Needs の ``needflow`` で自動生成）。
+図の中の箱をクリックすると、その need の定義に移動します。
+
+1. 要件のつながり（課題 → 業務要件 → 機能要件）
+------------------------------------------------
+
+.. needflow::
+   :types: iss, br, fr
+   :link_types: satisfies
+   :show_link_names:
+   :config: lefttoright
+
+2. 受注登録まわりの影響範囲
+---------------------------
+
+:need:`FR_001` （受注登録）を起点に、上流と下流をたどった図です。
+要件を変えるとき、どこまで影響するかをこの形で確認します。
+
+.. needflow::
+   :root_id: FR_001
+   :root_direction: both
+   :link_types: satisfies, realizes, verifies
+   :show_link_names:
+   :config: lefttoright
+
+3. 在庫引当まわりの影響範囲（設計 → テスト）
+--------------------------------------------
+
+.. needflow::
+   :root_id: FR_004
+   :root_direction: both
+   :link_types: satisfies, realizes, verifies
+   :show_link_names:
+   :config: lefttoright
+
+.. newbie:: 矢印の向き
+
+   矢印は「下流 → 上流」の向きです（例: テストケース → 機能要件）。
+   リンクは下流側（後から作る側）に書くルールなので、矢印もその向きになります。
+   上流の要件を書く人が、まだ存在しない設計の ID を知らなくても済むようにするためです。
